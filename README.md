@@ -7,7 +7,7 @@ python3 benchmark_costs.py 256 521 mitaka  4
 python3 benchmark_costs.py 512 257 falcon  4     # b_step=4 is the safe default at n=512
 python3 benchmark_costs.py 512 257 mitaka  6     # use b_step=6 if 4 OOMs
 ```
-Also, we design further attack as the Small-$`q^{\infty}`$, which is implemented in `linfty_smallqSIS.py`, and Dilithium-style $`\ell_\infty`$ analogue $`\mathsf{ISIS}^{\infty}_{n,m,q,\beta_\infty}`$ replaces the Euclidean acceptance condition $`\|\mathbf{x}\|\le\nu`$ of the original problem, and can test it by:
+Also, we design further attack as the Small-q^∞, which is implemented in `linfty_smallqSIS.py`, and Dilithium-style ℓ∞ analogue $`ISIS^∞_{n,m,q,β∞}`$ replaces the Euclidean acceptance condition $`‖x‖ ≤ ν`$ of the original problem, and can test it by:
 
 ```
 sage benchmark_linfty_attack.sage fast 5 # default is 3 trials
