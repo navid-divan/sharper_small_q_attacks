@@ -1,10 +1,3 @@
-# create (and possibly save) the values for Table 2
-# the values from left to right are the (rounded up values) of
-#   SISs
-#   ISIS_specific
-#   SISs_lift
-#   ISIS_lift_specific
-
 from lengthBound import length
 from small_qSIS import SIS_optimize_attack
 
