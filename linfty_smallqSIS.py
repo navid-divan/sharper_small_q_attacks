@@ -1,6 +1,5 @@
 """
 linfty_smallqSIS.py
--------------------
 ell_infty Z-shape attack on ISIS_n,m,q,beta_infty
 (the Dilithium-flavoured analogue of [DEP23] / efficient_smallqSIS.py).
 
@@ -35,8 +34,6 @@ Public entry points:
     sharp_cost_infty(q, w, h, beta_infty, beta)   -- one-shot cost
     optimize_sharp_infty(q, w, h, beta_infty)     -- 1D blocksize search
 
-Notes
------
 * For Dilithium-2 (n=1024, q=8380417, beta_infty=523776) the box is so
   large that sieve-tail coordinates trivially satisfy it; the only thing
   that gates success is the Zone I lift event, whose probability is
@@ -53,9 +50,7 @@ from modelBKZ import (svp_classical, BKZ_first_length,
 log_infinity = 9999
 
 
-# ---------------------------------------------------------------------------
 # (1)  Closed-form ell_infty cube-box intersection probabilities
-# ---------------------------------------------------------------------------
 def log_prob_ball_infty(n_q, beta_infty, q):
     """
     log P[ ||x||_infty <= beta_infty ]   for  x ~ U(Cube_{n_q}(q)).
@@ -90,9 +85,7 @@ def log_prob_isis_infty_sharp(n_q, beta_infty, q):
     return log(2.0 / q) + log_prob_ball_infty(n_q - 1, beta_infty, q)
 
 
-# ---------------------------------------------------------------------------
 # (2)  Box-survival fraction of sieve outputs (Zone II/III tail)
-# ---------------------------------------------------------------------------
 def sieve_box_fraction(beta_S, gh, beta_infty, otf=True,
                        num_buckets=24):
     """
@@ -165,10 +158,7 @@ def sieve_box_fraction(beta_S, gh, beta_infty, otf=True,
         return -log_infinity
     return log_db + log_total
 
-
-# ---------------------------------------------------------------------------
 # (3)  Integrated expected successes
-# ---------------------------------------------------------------------------
 def log_expected_successes_infty(q, n_q, beta_infty, beta_S, gh_sieve,
                                  otf=True, inhom="specific"):
     """
@@ -193,9 +183,7 @@ def log_expected_successes_infty(q, n_q, beta_infty, beta_S, gh_sieve,
     return log_db_surv + log_p_lift
 
 
-# ---------------------------------------------------------------------------
 # (4)  Sharp cost  +  1D blocksize optimisation
-# ---------------------------------------------------------------------------
 def sharp_cost_infty(q, w, h, beta_infty, beta,
                      cost_svp=svp_classical, otf=True, inhom="specific",
                      beta_sieve=None, verbose=False):
@@ -262,10 +250,7 @@ def optimize_sharp_infty(q, w, h, beta_infty,
               % (best[1], best[0]))
     return best
 
-
-# ---------------------------------------------------------------------------
 # (5)  Reference Dilithium parameters (for downstream scripts)
-# ---------------------------------------------------------------------------
 DILITHIUM = {
     # Round-3 specs.  beta_infty here is gamma_1 - beta (the bound that
     # the forged signature 'z' must satisfy to be accepted).
