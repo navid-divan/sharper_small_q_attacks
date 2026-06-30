@@ -219,7 +219,7 @@ def optimize_sharp(q, w, h, nu, cost_svp=svp_classical,
                   % (best[1], best[0]))
         return best
 
-    # ---- full 2D search (slower) ----
+    # full 2D search (slower)
     if beta_R_range is None:
         beta_R_range = range(20, min(200, w) + 1, 2)
     if beta_S_range is None:
