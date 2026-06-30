@@ -1,4 +1,4 @@
-# if you alter this run ./refresh.sh
+# if this gets altered, then run ./refresh.sh
 
 from collections import OrderedDict
 
