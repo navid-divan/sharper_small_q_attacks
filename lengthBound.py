@@ -16,7 +16,7 @@ leps_M = 41
 
 
 def smoothing(d, leps):
-    # there is an error on p.16 of https://eprint.iacr.org/2022/785.pdf
+    # not sure, but there is an error on p.16 of https://eprint.iacr.org/2022/785.pdf
     # both sigma_Falcon and sigma_Mitaka have a dependence on d and should
     # be larger than the smoothing parameter on ZZ^2d with relevant epsilon
     return (1./pi) * sqrt(log(4*d*(1+2**leps)) / 2)
