@@ -173,15 +173,13 @@ if trials == g6k.db_size():
     print("FAILED: All candidates lifted. No solution found")
     exit()
 
-# Reconstructing ISIS solution from SIS* solution
+# reconstructing ISIS solution from SIS* solution
 f = - y[n]
 x = vector(ZZ, list(f * y[:n])+list(f * y[n+1:]))
 
-# Checking it all
 assert (x * AISIS == u)
 assert (x.norm().n() < nu)
 
-# Claiming victory
 print("SUCCESS: ISIS solved after %d lifts, out of %d candidates !" % (trials, g6k.db_size())) # noqa
 print("Solution Norm:", x.norm().n(), " < ", nu)
 print("solution :", x)
