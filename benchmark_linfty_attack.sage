@@ -10,7 +10,7 @@ shorter, so cheap BKZ absorbs most of them, and the closed-form
 box probability ((2 beta_infty+1)/q)^{n_q} stays O(1).
 the closed-form
     pi^infty(beta_infty; q, n_q) = ((2 beta_infty + 1)/q)^{n_q}
-replaces the truncated-theta convolution of [DEP23], making both the
+replaces the truncated-theta convolution of [DEP23], which makes both the
 cost estimate and the attack itself strictly simpler than ell_2.
 """
 
