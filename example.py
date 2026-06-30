@@ -9,9 +9,9 @@ reduction (Generic Attack)
 
 Then, without on the fly lifting, we perform
     the SIS^* attack, and
-    the ISIS attack with probability loss factor q/2 described in Sec 3.5
+    the ISIS attack with probability loss factor q/2 described in Sec 3.5 of DEP23 paper
 
-Then, with on the fly lifting considering the Becker--Ducas--Gama--Laarhoven
+Then, with on the fly lifting considering the Becker-Ducas-Gama-Laarhoven
 sieve, we perform the same
 """
 
