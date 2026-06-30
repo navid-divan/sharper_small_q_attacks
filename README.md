@@ -1,5 +1,5 @@
 # Efficient Small-q Attacks on Short Integer Solution
-This work improves the classical small-q attack by [[DEP23]](https://link.springer.com/chapter/10.1007/978-3-031-38548-3_6). 
+This is implementation of efficient Large Norm attacks, which improves the classical small-q attack by [[DEP23]](https://link.springer.com/chapter/10.1007/978-3-031-38548-3_6). 
 A sharper small-q attack is implemented in `efficient_smallqSIS.py`, and to compare it with classical one, test:
 ```
 python3 benchmark_costs.py 256 257 falcon  # default: n=256 q=257 falcon 
