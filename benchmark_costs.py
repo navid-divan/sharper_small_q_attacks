@@ -32,7 +32,7 @@ def evaluate(d, q, scheme, b_step=2, verbose=True):
           % (d, q, scheme, nu, b_step))
     print("=" * 70)
 
-    # ---- (a) Classical ----
+    # (a) Classical
     clear_caches()
     print("\n[a] Classical  SIS_optimize_attack(..., inhom='specific') ...")
     saved = small_qSIS.STEPS_b
@@ -45,7 +45,7 @@ def evaluate(d, q, scheme, b_step=2, verbose=True):
         small_qSIS.STEPS_b = saved
     print("    -> beta* = %s,  cost = %.3f bits" % (b_orig, cost_orig))
 
-    # ---- (b) SHARP ----
+    # (b) SHARP
     clear_caches()
     print("\n[b] SHARP     optimize_sharp(..., inhom='specific') ...")
     # 1D search (beta_R = beta_S); empirically the 2D optimum lies on the
